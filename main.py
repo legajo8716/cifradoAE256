@@ -61,15 +61,17 @@ if __name__ == '__main__':
     texto=""
     for linea in archivo:
         texto=texto+linea
-    print(texto)
     archivo.close()
-    archivo = open("archivo1.txt","w")
-    archivo.write(texto)
 
-    variable= encrypt(texto,"legajo8716")
+    texto=encrypt(texto,"legajo8716")
+    print(texto)
+    texto=decrypt(texto,"legajo8716")
 
-    variable1=decrypt(variable,"legajo8716")
 
-    print(variable1)
+   # archivo = open("archivo1.txt","w")
+    #archivo.write(texto)
+
+
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
